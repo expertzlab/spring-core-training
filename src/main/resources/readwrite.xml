@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="scanner" class="com.expertzlab.spring.core.readwrite.Scanner"/>
+    <bean name="diagramPad" class="com.expertzlab.spring.core.readwrite.DiagramPad" />
+
+    <bean name="printer" class="com.expertzlab.spring.core.readwrite.Printer" />
+    <bean name="screen" class="com.expertzlab.spring.core.readwrite.Screen" />
+
+
+    <bean name="printerService" class="com.expertzlab.spring.core.readwrite.PrinterService">
+    </bean>
+
+</beans>
