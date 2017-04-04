@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="application" class="com.expertzlab.spring.core.inherit.InApp" />
+
+    <bean name="template" abstract="true" >
+        <property name="message1" value="Hello Kerala"/>
+        <property name="message2" value="Welcome to The conference"/>
+        <property name="message3" value="Namaste Kerala"/>
+    </bean>
+    <bean name="helloKerala" class="com.expertzlab.spring.core.inherit.HelloKerala" parent="template">
+
+    </bean>
+
+    <bean name="helloIndia" class="com.expertzlab.spring.core.inherit.HelloIndia" parent="template">
+        <property name="message1" value="Hello India"/>
+        <property name="message3" value="Namaste India"/>
+    </bean>
+
+    <bean name="helloWorld" class="com.expertzlab.spring.core.inherit.HelloWorld" parent="template">
+        <property name="message4" value="Namasteworld"/>
+    </bean>
+</beans>

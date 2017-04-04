@@ -1,5 +1,6 @@
 package com.expertzlab.spring.core;
 
+import com.expertzlab.spring.core.postprocess.PrintHello;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -10,9 +11,7 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-        HelloBean bean = (HelloBean) context.getBean("helloBean");
-        bean.printHello();
-        bean = (HelloBean) context.getBean("helloBeanXML");
+        PrintHello bean = (PrintHello) context.getBean("helloBean");
         bean.printHello();
     }
 }
