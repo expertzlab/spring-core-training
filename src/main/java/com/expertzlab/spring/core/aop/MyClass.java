@@ -10,11 +10,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyClass {
 
-    @Autowired
     YourClass yourClass;
 
     public void myMethod(){
         System.out.println("In My Method");
         yourClass.yourMethod();
+    }
+
+    public void setYourClass(YourClass yourClass) {
+        this.yourClass = yourClass;
     }
 }

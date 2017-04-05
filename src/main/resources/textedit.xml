@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="textEditor" class="com.expertzlab.spring.core.innerclass.TextEditor">
+        <property name="spellcheckList">
+            <list>
+                <bean name="spellChecker1" class="com.expertzlab.spring.core.innerclass.SpellChecker">
+                    <constructor-arg value="1" />
+                </bean>
+                <bean name="spellChecker2" class="com.expertzlab.spring.core.innerclass.SpellChecker">
+                    <constructor-arg value="2" />
+                </bean>
+                <bean name="spellChecker3" class="com.expertzlab.spring.core.innerclass.SpellChecker">
+                    <constructor-arg value="3" />
+                </bean>
+            </list>
+        </property>
+
+        <property name="values">
+            <set>
+                <value></value>
+                <value>String 2</value>
+                <value>String 1</value>
+            </set>
+        </property>
+    </bean>
+
+
+
+</beans>
