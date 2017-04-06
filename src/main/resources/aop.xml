@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan base-package="com.expertzlab.spring.core.aop" />
+    <aop:config>
+        <aop:aspect id="log" ref="logging">
+            <aop:pointcut id="selectAll" expression="execution(* com.expertzlab.spring.core.annotationconfig.*.*(..))" />
+            <aop:before pointcut-ref="selectAll" method="beforeAdvice"/>
+            <aop:after method="afterAdvice" pointcut-ref="selectAll"/>
+            <aop:after-returning method="afterReturningAdvice" pointcut-ref="selectAll" returning="returnVal"/>
+            <aop:after-throwing method="afterThrowingExceptionAdvice" pointcut-ref="selectAll" throwing="exception" />
+        </aop:aspect>
+    </aop:config>
 
-    <bean name="myClass" class="com.expertzlab.spring.core.aop.MyClass" p:yourClass-ref="yourClass">
-    </bean>
+    <bean id="logging" class="com.expertzlab.spring.core.aop.Logging"/>
 
-    <bean name="yourClass" class="com.expertzlab.spring.core.aop.YourClass" p:p1="First String" p:p2="Second String">
-        <constructor-arg value="100" index="1"/>
-        <constructor-arg value="200" index="0"/>
+    <bean id="student" class="com.expertzlab.spring.core.annotationconfig.Student">
+        <property name="age" value="30"/>
+        <property name="name" value="Rajiv" />
     </bean>
 </beans>

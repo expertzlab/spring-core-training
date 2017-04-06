@@ -1,4 +1,4 @@
-package com.expertzlab.spring.core.aop;
+package com.expertzlab.spring.core.param;
 
 /**
  * Created by gireeshbabu on 05/04/17.

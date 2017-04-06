@@ -1,6 +1,5 @@
-package com.expertzlab.spring.core.aop;
+package com.expertzlab.spring.core.param;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**

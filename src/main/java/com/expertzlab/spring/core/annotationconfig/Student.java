@@ -23,10 +23,17 @@ public class Student {
     }
 
     public String getName() {
+        System.out.println("In Get Name");
         return name;
     }
 
     public int getAge() {
+        System.out.println("In get Age");
         return age;
+    }
+
+    public void printThrowException(){
+        System.out.println("Throwing IllegalarguemntException");
+        throw new IllegalArgumentException();
     }
 }

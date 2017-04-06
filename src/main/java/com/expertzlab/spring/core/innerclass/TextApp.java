@@ -1,6 +1,5 @@
 package com.expertzlab.spring.core.innerclass;
 
-import com.expertzlab.spring.core.aop.MyClass;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
