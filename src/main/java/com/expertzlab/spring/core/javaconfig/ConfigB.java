@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
  * Created by gireeshbabu on 06/04/17.
  */
 
-@Import(ConfigA.class)
+//@Import(ConfigA.class)
 @Configuration
 public class ConfigB {
 

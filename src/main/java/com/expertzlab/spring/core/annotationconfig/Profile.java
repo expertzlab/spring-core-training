@@ -10,14 +10,16 @@ import javax.annotation.Resource;
  */
 public class Profile {
 
-    @Qualifier("student1")
-    @Autowired
+    //@Qualifier("student1")
     private Student student;
+
 
     @Resource(name = "teacher")
     private Teacher teacher;
 
+    @Autowired(required = false)
     private Subject subject;
+
 
     public void printAge(){
         System.out.println("Age -" + student.getAge());
@@ -27,6 +29,7 @@ public class Profile {
     public void printName(){
         System.out.println("Name - "+ student.getName());
     }
+
 
     public void printSubject(){
         System.out.println("Subject - ");
@@ -43,5 +46,13 @@ public class Profile {
 
     public void setSubject(Subject subject) {
         this.subject = subject;
+    }
+
+
+
+    @Qualifier("student2")
+    @Autowired
+    public void setStudent(Student student) {
+        this.student = student;
     }
 }

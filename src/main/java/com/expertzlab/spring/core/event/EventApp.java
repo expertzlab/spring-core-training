@@ -1,6 +1,6 @@
 package com.expertzlab.spring.core.event;
 
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -8,8 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class EventApp {
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("event.xml");
-        context.start();
-        context.stop();
+        ApplicationContext context = new ClassPathXmlApplicationContext("event.xml");
+        MessagePublisher publisher = (MessagePublisher) context.getBean("publisher");
+        publisher.sentMessage();
     }
 }

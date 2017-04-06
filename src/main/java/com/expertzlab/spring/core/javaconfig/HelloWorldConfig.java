@@ -14,4 +14,10 @@ public class HelloWorldConfig {
     public HelloWorld getHelloWorld(){
         return new HelloWorld();
     }
+
+    @Bean
+    public String getString(){
+        return new String("I like expertzlab");
+    }
+
 }

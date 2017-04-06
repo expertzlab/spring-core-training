@@ -9,11 +9,10 @@
     <bean name="reqBean" class="com.expertzlab.spring.core.annotationconfig.RequireBean">
         <property name="reqString" value="test" />
     </bean>
-
     <bean name="profile" class="com.expertzlab.spring.core.annotationconfig.Profile">
 
     </bean>
-    <bean name="student" class="com.expertzlab.spring.core.annotationconfig.Student">
+    <bean name="student2" class="com.expertzlab.spring.core.annotationconfig.Student">
         <property name="name" value="Gireesh" />
         <property name="age" value="32" />
 
@@ -26,9 +25,17 @@
 
     </bean>
 
+
     <bean name="teacher" class="com.expertzlab.spring.core.annotationconfig.Teacher">
         <property name="subject" value="Maths" />
     </bean>
 
+    <!--
+    <bean name="subject1" class="com.expertzlab.spring.core.annotationconfig.Subject">
+        <constructor-arg value="Physics" />
+    </bean>
+
+    -->
     <bean name="jsr250" class="com.expertzlab.spring.core.annotationconfig.JSR250Annotations"/>
+
 </beans>

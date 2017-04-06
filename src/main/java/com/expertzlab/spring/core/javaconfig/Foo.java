@@ -12,4 +12,9 @@ public class Foo {
     public void destroy(){
         System.out.println("Destroy");
     }
+
+
+    public void printExt(){
+
+    }
 }

@@ -8,6 +8,7 @@ public class Subject {
     public Subject(String name){
         this.subjectName = name;
     }
+
     private String subjectName;
 
     public String getSubjectName() {

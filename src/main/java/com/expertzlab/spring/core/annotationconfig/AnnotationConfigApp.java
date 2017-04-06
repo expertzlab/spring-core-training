@@ -13,14 +13,19 @@ public class AnnotationConfigApp {
         ApplicationContext context = new ClassPathXmlApplicationContext("annotateconfig.xml");
         RequireBean requireBean = (RequireBean) context.getBean("reqBean");
         requireBean.defMethod();
+
+
         Profile profile = (Profile) context.getBean("profile");
         profile.printAge();
         profile.printName();
 
+
         profile.printSubject();
+
 
         JSR250Annotations annotations = (JSR250Annotations) context.getBean("jsr250");
         annotations.printHi();
         ((AbstractApplicationContext)context).close();
+
     }
 }
