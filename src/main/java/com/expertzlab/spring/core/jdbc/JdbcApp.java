@@ -14,10 +14,19 @@ public class JdbcApp {
         ApplicationContext context = new ClassPathXmlApplicationContext("jdbc.xml");
         StudentDAO dao = (StudentDAO) context.getBean("studentDao");
         Student student = new Student();
-        student.setAge(20);
-        student.setName("pankaj");
+        student.setAge(25);
+        student.setName("Binu");
         dao.create(student);
         ((AbstractApplicationContext)context).registerShutdownHook();
+
+        for(Student s: dao.getAllStudent()){
+            System.out.println("Name - "+s.getName());
+            System.out.println("Age - "+ s.getAge());
+            System.out.println("------------");
+        }
+        ((AbstractApplicationContext) context).stop();
+        //((AbstractApplicationContext) context).
+        ((AbstractApplicationContext)context).close();
 
     }
 }

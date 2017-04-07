@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Required;
  */
 public class Student {
 
+    private int id;
     private String name;
     private int age;
 
@@ -35,5 +36,13 @@ public class Student {
     public void printThrowException(){
         System.out.println("Throwing IllegalarguemntException");
         throw new IllegalArgumentException();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
