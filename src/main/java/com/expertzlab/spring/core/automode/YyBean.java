@@ -4,15 +4,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by gireeshbabu on 05/04/17.
+ * Created by admin on 16/03/18.
  */
 
-
 @Component
-public class YourBean implements KBean{
+public class YyBean implements KBean {
 
     public void yDefault(){
-        System.out.println("in YourBean default method");
+        System.out.println("in YBean default method");
     }
-
 }

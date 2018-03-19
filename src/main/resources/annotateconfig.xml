@@ -6,6 +6,11 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config />
+
+    <bean name="teacher" class="com.expertzlab.spring.core.annotationconfig.Teacher">
+
+    </bean>
+    <!--
     <bean name="reqBean" class="com.expertzlab.spring.core.annotationconfig.RequireBean">
         <property name="reqString" value="test" />
     </bean>
@@ -31,4 +36,5 @@
     </bean>
 
     <bean name="jsr250" class="com.expertzlab.spring.core.annotationconfig.JSR250Annotations"/>
+    -->
 </beans>
