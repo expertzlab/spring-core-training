@@ -10,6 +10,7 @@
         <property name="message2" value="Welcome to The conference"/>
         <property name="message3" value="Namaste Kerala"/>
     </bean>
+
     <bean name="helloKerala" class="com.expertzlab.spring.core.inherit.HelloKerala" parent="template">
 
     </bean>

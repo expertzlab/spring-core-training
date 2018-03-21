@@ -10,7 +10,12 @@ import org.springframework.context.annotation.Configuration;
 public class JavaConfig {
 
     @Bean
-    public Subject getSubject(){
-        return new Subject("Physics");
+    public Subject subject(){
+        return new Subject("Chemistry");
+    }
+
+    @Bean
+    public Teacher teacher(){
+        return new Teacher();
     }
 }
