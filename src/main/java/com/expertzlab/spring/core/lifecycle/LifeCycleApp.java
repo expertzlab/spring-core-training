@@ -12,9 +12,8 @@ public class LifeCycleApp {
     public static void main(String[] args) {
 
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
-        HelloBean hbean = (HelloBean) context.getBean("helloBeanXML");
-        HelloBean hbean1 = (HelloBean) context.getBean("helloBeanXML1");
-        hbean.printHello();
+        HelloBean hbean = (HelloBean) context.getBean("helloBean");
+
         context.registerShutdownHook();
     }
 }

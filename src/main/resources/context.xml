@@ -2,15 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" default-lazy-init="true">
 
-    <bean id="helloBean" class="com.expertzlab.spring.core.HelloBean"/>
+    <bean id="helloBean" class="com.expertzlab.spring.core.HelloBean" init-method="init" destroy-method="close">
+        <property name="a" value="10" />
+        <property name="b" value="20" />
+        <property name="ab" value="30" />
+    </bean>
 
-    <bean id="election" class="com.expertzlab.spring.core.coupling.Election" />
-
-    <bean id="printHelloTijo" class="com.expertzlab.spring.core.postprocess.TijoHello" />
-    <bean id="printHelloDany" class="com.expertzlab.spring.core.postprocess.DanyHello" />
-
-
-    <bean class="com.expertzlab.spring.core.postprocess.InitHelloWorld" />
 </beans>

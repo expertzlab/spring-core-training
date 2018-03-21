@@ -10,20 +10,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class JavaConfigApp {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(JavaConfig.class, HelloWorldConfig.class, ConfigB.class);
 
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.register(ConfigB.class);
 
         context.refresh();
-        HelloWorld hw = context.getBean(HelloWorld.class);
-        hw.setMessage1("Message 1");
-        System.out.println(hw.getMessage1());
 
-
-        //context.refresh();
-        Subject subject = context.getBean(Subject.class);
-        //subject.setSubjectName("Subject - Maths");
-        System.out.println( subject.getSubjectName());
 
         A a = context.getBean(A.class);
         B b = context.getBean(B.class);
